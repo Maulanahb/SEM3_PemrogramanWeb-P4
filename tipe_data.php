@@ -35,14 +35,18 @@ echo "<br>";
 var_dump($apakahSiswaSudahUjian);
 echo "<br>";
 
-$namDepan="Ibnu";
+$namaDepan="Ibnu";
 $namaBelakang='Jakaria';
 
-$namaLengkap = "{$namDepan} {$namaBelakang}";
+$namaLengkap = "{$namaDepan} {$namaBelakang}";
 $namaLengkap2 = $namaDepan . ' ' . $namaBelakang;
 
-echo "Nama depan : {$namDepan} <br>";
+echo "Nama depan : {$namaDepan} <br>";
 echo 'nama belakang : ' .$namaBelakang. " <br>";
 
 echo $namaLengkap;
+echo "<br>";
+
+$listMahasiswa =["Wahid Abdullah","Elmo Bachtiar","Lendis Febri"];
+echo $listMahasiswa;
 ?>
