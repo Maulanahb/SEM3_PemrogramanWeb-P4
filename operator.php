@@ -23,10 +23,10 @@
     $hasilLebihKecilSama = $a <= $b ;
     $hasilLebihBesarSama = $a >= $b ;
 
-    echo "Hasil Sama : $hasilSama <br>";
-    echo "Hasil Tidak Sama : $hasilTidakSama <br>";
-    echo "Hasil Lebih Kecil : $hasilLebihKecil <br>";
-    echo "Hasil Lebih Besar : $hasilLebihBesar <br>";
-    echo "Hasil Lebih Kecil Sama : $hasilLebihKecilSama <br>";
-    echo "Hasil Lebih Kecil : $hasilLebihBesarSama <br>";
+    echo "Hasil Sama : "; var_dump($hasilSama); echo "<br>";
+    echo "Hasil Tidak Sama : "; var_dump($hasilTidakSama); echo "<br>";
+    echo "Hasil Lebih Kecil : "; var_dump($hasilLebihKecil); echo "<br>";
+    echo "Hasil Lebih Besar : "; var_dump($hasilLebihBesar); echo "<br>";
+    echo "Hasil Lebih Kecil Sama : "; var_dump($hasilLebihKecilSama); echo "<br>";
+    echo "Hasil Lebih Besar Sama : "; var_dump($hasilLebihBesarSama); echo "<br>";
 ?>
