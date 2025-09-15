@@ -48,5 +48,5 @@ echo $namaLengkap;
 echo "<br>";
 
 $listMahasiswa =["Wahid Abdullah","Elmo Bachtiar","Lendis Febri"];
-echo $listMahasiswa;
+echo $listMahasiswa[0];
 ?>
