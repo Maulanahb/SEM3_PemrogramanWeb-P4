@@ -46,7 +46,8 @@
     $a *= $b;
     $a /= $b;
     $a %= $b;
-    // Agar setiap operasi menunjukkan hasil yang benar, nilai $a perlu direset ke 10 sebelum setiap operasi penugasan.
+    // Agar setiap operasi menunjukkan hasil yang benar,
+    // nilai $a perlu direset ke 10 sebelum setiap operasi penugasan.
     echo "Hasil a += b : $a <br>";
     $a = 10; // Reset nilai $a
     $a -= $b;
@@ -60,4 +61,23 @@
     $a = 10; // Reset nilai $a
     $a %= $b;
     echo "Hasil a %= b : $a <br>";
+
+    $hasilIdentik =$a === $b;
+    $hasilTidakIdentik =$a !== $b;
+
+    echo "Hasil Identik : "; var_dump($hasilIdentik); echo "<br>";
+    echo "Hasil Tidak Identik : "; var_dump($hasilTidakIdentik); echo "<br>";
+
+    echo "";
+    //Sebuah restoran memiliki 45 kursi di dalamnya. Pada suatu malam,
+    // 28 kursi telah ditempati oleh pelanggan. Berapa persen kursi yang masih kosong di restoran tersebut
+    $totalKursi = 45;
+    $kursiTerisi = 28;
+    $kursiKosong = $totalKursi - $kursiTerisi;
+    $persenKursiKosong = ($kursiKosong / $totalKursi) * 100;
+
+    echo "Total kursi: $totalKursi <br>";
+    echo "Kursi terisi: $kursiTerisi <br>";
+    echo "Kursi kosong: $kursiKosong <br>";
+    echo "Persentase kursi yang kosong: " . $persenKursiKosong . "%";
 ?>
