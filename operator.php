@@ -29,4 +29,35 @@
     echo "Hasil Lebih Besar : "; var_dump($hasilLebihBesar); echo "<br>";
     echo "Hasil Lebih Kecil Sama : "; var_dump($hasilLebihKecilSama); echo "<br>";
     echo "Hasil Lebih Besar Sama : "; var_dump($hasilLebihBesarSama); echo "<br>";
+
+    $hasilAnd = $a == $b ;
+    $hasilOr = $a || $b ;
+    $hasilNotA = !$a;
+    $hasilNotB = !$b;
+
+    echo "Hasil And : "; var_dump($hasilAnd); echo "<br>";
+    echo "Hasil Or : "; var_dump($hasilOr); echo "<br>";
+    echo "Hasil Not A : "; var_dump($hasilNotA); echo "<br>";
+    echo "Hasil Not B : "; var_dump($hasilNotB); echo "<br";
+    echo "<br>";
+    echo "<br>";
+    $a += $b;
+    $a -= $b;
+    $a *= $b;
+    $a /= $b;
+    $a %= $b;
+    // Agar setiap operasi menunjukkan hasil yang benar, nilai $a perlu direset ke 10 sebelum setiap operasi penugasan.
+    echo "Hasil a += b : $a <br>";
+    $a = 10; // Reset nilai $a
+    $a -= $b;
+    echo "Hasil a -= b : $a <br>";
+    $a = 10; // Reset nilai $a
+    $a *= $b;
+    echo "Hasil a *= b : $a <br>";
+    $a = 10; // Reset nilai $a
+    $a /= $b;
+    echo "Hasil a /= b : $a <br>";
+    $a = 10; // Reset nilai $a
+    $a %= $b;
+    echo "Hasil a %= b : $a <br>";
 ?>
