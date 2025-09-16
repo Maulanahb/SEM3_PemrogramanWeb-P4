@@ -53,30 +53,36 @@ foreach($nilaiSiswa as $nilai){
     }
 }
 echo "<br>";
-//dafatar nilai dari 10 siswa
+// daftar nilai dari 10 siswa
 $nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
-//urutkan aaray dari nilai rendah ke tinggi
+echo "Daftar Nilai Siswa awal: " . implode(", ", $nilaiSiswa) . "<br>";
+
+// mengurutkan nilai dari yang terkecil ke terbesar
 sort($nilaiSiswa);
-//mencari nilai terendah dan tertinggi secara otomatis
-$nilaiTerendah1 = $nilaiSiswa[0];
-$nilaiTerendah2 = $nilaiSiswa[1];
-$nilaiTertinggi1 = end($nilaiSiswa);//end untuk mengambil nilai terakhir pada array;
-array_pop($nilaiSiswa);//menghapus nilai terakhir pada array
-$nilaiTertinggi2 = end($nilaiSiswa);//end untuk mengambil nilai terakhir pada array;
-// Mengurutkan kembali array dan membuang 2 nilai terendah dan 2 nilai tertinggi
-$nilaiUntukDihitung = array_slice($nilaiSiswa, 2, -2);
-    
-    // Menghitung total nilai dari sisa array
-    $totalNilai = 0;
-    foreach ($nilaiUntukDihitung as $nilai) {
-        $totalNilai += $nilai;
-    }
 
-    // Menampilkan hasilnya
-    echo "Daftar nilai awal: " . implode(", ", $nilaiSiswa) . "<br>";
-    echo "Dua nilai terendah: $nilaiTerendah1 dan $nilaiTerendah2<br>";
-    echo "Dua nilai tertinggi: $nilaiTertinggi2 dan $nilaiTertinggi1<br>";
-    echo "Nilai yang diabaikan: [$nilaiTerendah1, $nilaiTerendah2, $nilaiTertinggi2, $nilaiTertinggi1]<br>";
-    echo "Total nilai yang digunakan untuk rata-rata adalah: $totalNilai";
+// ambil dua nilai terendah
+$nilaiTerendah = [$nilaiSiswa[0], $nilaiSiswa[1]];
 
+// ambil dua nilai tertinggi
+$duaTertinggi = [$nilaiSiswa[count($nilaiSiswa)-2], $nilaiSiswa[count($nilaiSiswa)-1]];
+
+echo "Dua nilai terendah: " . implode(", ", $nilaiTerendah) . "<br>";
+echo "Dua nilai tertinggi: " . implode(", ", $duaTertinggi) . "<br>";
+
+// mengaabaikan nilai terendah dan tertinggi
+$nilaiDiabaikan = array_merge($nilaiTerendah, $duaTertinggi);
+echo "Nilai yang diabaikan: [" . implode(", ", $nilaiDiabaikan) . "]<br>";
+
+// membuang dua nilai terendah dan dua nilai tertinggi dari daftar nilai
+array_shift($nilaiSiswa); // hapus nilai terendah pertama
+array_shift($nilaiSiswa); // hapus nilai terendah kedua
+array_pop($nilaiSiswa);   // hapus nilai tertinggi pertama
+array_pop($nilaiSiswa);   // hapus nilai tertinggi kedua
+
+// menghitung total dan rata-rata nilai yang tersisa
+$totalNilai = array_sum($nilaiSiswa);
+$rata = $totalNilai / count($nilaiSiswa);
+
+echo "Total nilai yang digunakan untuk rata-rata adalah: $totalNilai<br>";
+echo "Rata-rata nilai: $rata";
 ?>
