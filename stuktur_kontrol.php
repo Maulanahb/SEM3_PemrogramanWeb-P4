@@ -52,6 +52,7 @@ foreach($nilaiSiswa as $nilai){
         echo "Nilai:$nilai (Lulus)<br>";
     }
 }
+//soal 4.6
 echo "<br>";
 // daftar nilai dari 10 siswa
 $nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
@@ -85,4 +86,22 @@ $rata = $totalNilai / count($nilaiSiswa);
 
 echo "Total nilai yang digunakan untuk rata-rata adalah: $totalNilai<br>";
 echo "Rata-rata nilai: $rata";
+echo "<br>";
+
+//soal 4.7
+$harga="120000";
+
+//cek apakah harga lebih dari 100000
+if($harga > 100000){
+    //jika ya, maka diskon 20%
+    $diskon = 0.10 * $harga;
+    $hargaAkhir = $harga - $diskon;
+}else{
+    //jika tidak, maka diskon 0%
+    $diskon = 0;
+    $hargaAkhir = $harga;
+}
+echo "Harga Awal : Rp " . number_format($harga, 0, ',', '.') . "<br>";
+echo "Diskon     : Rp " . number_format($diskon, 0, ',', '.') . "<br>";
+echo "Harga Akhir yang harus dibayar : Rp " . number_format($hargaAkhir, 0, ',', '.');
 ?>
