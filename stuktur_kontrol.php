@@ -104,4 +104,15 @@ if($harga > 100000){
 echo "Harga Awal : Rp " . number_format($harga, 0, ',', '.') . "<br>";
 echo "Diskon     : Rp " . number_format($diskon, 0, ',', '.') . "<br>";
 echo "Harga Akhir yang harus dibayar : Rp " . number_format($hargaAkhir, 0, ',', '.');
+echo "<br>";
+
+//soal 4.8
+//skor awal pemain
+$poin = 450;//poin awal dan ubah sesuai output yang diinginkan
+
+echo "Total skor pemain adalah $poin poin.<br>";
+
+//tenary operator
+$hadiah = ($poin >= 500) ? " YA " : " TIDAK ";
+echo "Apakah pemain mendapatkan hadiah? $hadiah<br>";
 ?>
